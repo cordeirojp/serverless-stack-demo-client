@@ -138,8 +138,8 @@ export default class Signup extends Component {
           disabled={!this.validateForm()}
           type="submit"
           isLoading={this.state.isLoading}
-          text="Signup"
-          loadingText="Signing up…"
+          text="Inscription"
+          loadingText="Inscription…"
         />
       </form>
     );

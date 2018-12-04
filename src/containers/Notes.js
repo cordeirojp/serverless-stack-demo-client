@@ -105,7 +105,7 @@ export default class Notes extends Component {
     event.preventDefault();
 
     const confirmed = window.confirm(
-      "Are you sure you want to delete this note?"
+      "Êtes-vous sûr de vouloir supprimer cette note ?"
     );
 
     if (!confirmed) {
@@ -137,7 +137,7 @@ export default class Notes extends Component {
             </FormGroup>
             {this.state.note.attachment &&
               <FormGroup>
-                <ControlLabel>Attachment</ControlLabel>
+                <ControlLabel>Fichier joint</ControlLabel>
                 <FormControl.Static>
                   <a
                     target="_blank"
@@ -150,7 +150,7 @@ export default class Notes extends Component {
               </FormGroup>}
             <FormGroup controlId="file">
               {!this.state.note.attachment &&
-                <ControlLabel>Attachment</ControlLabel>}
+                <ControlLabel>Fichier joint</ControlLabel>}
               <FormControl onChange={this.handleFileChange} type="file" />
             </FormGroup>
             <LoaderButton
@@ -160,8 +160,8 @@ export default class Notes extends Component {
               disabled={!this.validateForm()}
               type="submit"
               isLoading={this.state.isLoading}
-              text="Save"
-              loadingText="Saving…"
+              text="Enregistrer"
+              loadingText="Enregistrement…"
             />
             <LoaderButton
               block
@@ -169,8 +169,8 @@ export default class Notes extends Component {
               bsSize="large"
               isLoading={this.state.isDeleting}
               onClick={this.handleDelete}
-              text="Delete"
-              loadingText="Deleting…"
+              text="Supprimer"
+              loadingText="Suppression…"
             />
           </form>}
       </div>

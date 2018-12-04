@@ -62,8 +62,9 @@ export default class Home extends Component {
   renderLander() {
     return (
       <div className="lander">
-        <h1>CATS@Notes (C)2018 JPCordeiro</h1>
+        <h1>CATS@Notes</h1>
         <p>Une application Cloud Serverless de prise de notes</p>
+        <p>(C)2018 JPCordeiro</p>
         <div>
           <Link to="/login" className="btn btn-info btn-lg">
             Connexion

@@ -6,13 +6,13 @@ const dev = {
   },
   apiGateway: {
     REGION: "us-east-1",
-    URL: "https://api.serverless-stack.seed-demo.club/dev"
+    URL: "https://c871q2ea04.execute-api.us-east-1.amazonaws.com/dev"
   },
   cognito: {
     REGION: "us-east-1",
-    USER_POOL_ID: "us-east-1_yKOQs2dWK",
-    APP_CLIENT_ID: "1h0r8s763vnqj4id6dvguanp8f",
-    IDENTITY_POOL_ID: "us-east-1:dedfd34a-9d7e-4bf2-a1dd-ef603bac2ecb"
+    USER_POOL_ID: "us-east-1_hF2aaQX1o",
+    APP_CLIENT_ID: "3gckhlbs9ipkr4vogsllhilrbr",
+    IDENTITY_POOL_ID: "us-east-1:b998d4d0-aec5-48e7-867b-9c48533bf623"
   }
 };
 

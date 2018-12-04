@@ -76,7 +76,7 @@ export default class NewNote extends Component {
             />
           </FormGroup>
           <FormGroup controlId="file">
-            <ControlLabel>Attachment</ControlLabel>
+            <ControlLabel>Fichier joint</ControlLabel>
             <FormControl onChange={this.handleFileChange} type="file" />
           </FormGroup>
           <LoaderButton
@@ -86,8 +86,8 @@ export default class NewNote extends Component {
             disabled={!this.validateForm()}
             type="submit"
             isLoading={this.state.isLoading}
-            text="Create"
-            loadingText="Creating…"
+            text="Créer"
+            loadingText="Création…"
           />
         </form>
       </div>

@@ -75,10 +75,6 @@ export default class NewNote extends Component {
               componentClass="textarea"
             />
           </FormGroup>
-          <FormGroup controlId="file">
-            <ControlLabel>Fichier joint</ControlLabel>
-            <FormControl onChange={this.handleFileChange} type="file" />
-          </FormGroup>
           <LoaderButton
             block
             bsStyle="primary"

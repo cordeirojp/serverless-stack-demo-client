@@ -54,7 +54,7 @@ class App extends Component {
         <Navbar fluid collapseOnSelect>
           <Navbar.Header>
             <Navbar.Brand>
-              <Link to="/">Scratch</Link>
+              <Link to="/">CATS@Notes</Link>
             </Navbar.Brand>
             <Navbar.Toggle />
           </Navbar.Header>
@@ -62,17 +62,14 @@ class App extends Component {
             <Nav pullRight>
               {this.state.isAuthenticated
                 ? <Fragment>
-                    <LinkContainer to="/settings">
-                      <NavItem>Settings</NavItem>
-                    </LinkContainer>
-                    <NavItem onClick={this.handleLogout}>Logout</NavItem>
+                    <NavItem onClick={this.handleLogout}>Déconnexion</NavItem>
                   </Fragment>
                 : <Fragment>
                     <LinkContainer to="/signup">
-                      <NavItem>Signup</NavItem>
+                      <NavItem>Inscription</NavItem>
                     </LinkContainer>
                     <LinkContainer to="/login">
-                      <NavItem>Login</NavItem>
+                      <NavItem>Connexion</NavItem>
                     </LinkContainer>
                   </Fragment>
               }

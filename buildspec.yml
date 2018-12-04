@@ -1,0 +1,13 @@
+version: 0.1
+phases:
+  install:
+    commands:
+      - npm install
+      - npm install -g @aws-amplify/cli
+      - amplify init
+      - amplify add hosting
+  build:
+    commands:
+      - amplify publish
+  post_build:
+    commands:

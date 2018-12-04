@@ -148,11 +148,6 @@ export default class Notes extends Component {
                   </a>
                 </FormControl.Static>
               </FormGroup>}
-            <FormGroup controlId="file">
-              {!this.state.note.attachment &&
-                <ControlLabel>Fichier joint</ControlLabel>}
-              <FormControl onChange={this.handleFileChange} type="file" />
-            </FormGroup>
             <LoaderButton
               block
               bsStyle="primary"

@@ -3,11 +3,11 @@ phases:
   install:
     commands:
       - npm install
-      - npm install -g @aws-amplify/cli
-      - amplify init
-      - amplify add hosting
   build:
     commands:
-      - amplify publish
+      - npm run build
   post_build:
     commands:
+      - aws s3 cp --recursive --acl public-read ./build s3://cats-notes-frontend-bucket/
+      - aws s3 cp --acl public-read --cache-control="max-age=0, no-cache, no-store, must-revalidate" ./build/service-worker.js s3://cats-notes-frontend-bucket/
+      - aws s3 cp --acl public-read --cache-control="max-age=0, no-cache, no-store, must-revalidate" ./build/index.html s3://cats-notes-frontend-bucket/

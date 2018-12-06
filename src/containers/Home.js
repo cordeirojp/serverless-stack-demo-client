@@ -65,7 +65,7 @@ export default class Home extends Component {
         <h1>CATS@Notes</h1>
         <p>Une application Cloud Serverless de prise de notes</p>
         <p>(C)2018 JPCordeiro</p>
-        <p><img src="%PUBLIC_URL%/cats_rvb_1024x250-1024x250.png"></p>
+        <p><img src="%PUBLIC_URL%/cats_rvb_1024x250-1024x250.png" alt="Logo CATS"></p>
         <div>
           <Link to="/login" className="btn btn-info btn-lg">
             Connexion

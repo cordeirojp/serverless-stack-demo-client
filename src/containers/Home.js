@@ -35,27 +35,22 @@ export default class Home extends Component {
   }
 
   renderNotesList(notes) {
-    return [{}].concat(notes).map(
-      (note, i) =>
-        i !== 0
-          ? <LinkContainer
-              key={note.noteId}
-              to={`/notes/${note.noteId}`}
-            >
-              <ListGroupItem header={note.content.trim().split("\n")[0]}>
-                {"Création: " + new Date(note.createdAt).toLocaleString()}
-              </ListGroupItem>
-            </LinkContainer>
-          : <LinkContainer
-              key="new"
-              to="/notes/new"
-            >
-              <ListGroupItem>
-                <h4>
-                  <b>{"\uFF0B"}</b> Créer une note
-                </h4>
-              </ListGroupItem>
-            </LinkContainer>
+    return [{}].concat(notes).map((note, i) =>
+      i !== 0 ? (
+        <LinkContainer key={note.noteId} to={`/notes/${note.noteId}`}>
+          <ListGroupItem header={note.content.trim().split("\n")[0]}>
+            {"Création: " + new Date(note.createdAt).toLocaleString()}
+          </ListGroupItem>
+        </LinkContainer>
+      ) : (
+        <LinkContainer key="new" to="/notes/new">
+          <ListGroupItem>
+            <h4>
+              <b>{"\uFF0B"}</b> Créer une note
+            </h4>
+          </ListGroupItem>
+        </LinkContainer>
+      )
     );
   }
 
@@ -65,7 +60,14 @@ export default class Home extends Component {
         <h1>CATS@Notes</h1>
         <p>Une application Cloud Serverless de prise de notes</p>
         <p>(C)2018 JPCordeiro</p>
-        <p><img src="/cats_rvb_1024x250-1024x250.png" alt="Logo CATS"/></p>
+        <p>
+          <img
+            src="/cats_rvb_1024x250-1024x250.png"
+            alt="Logo CATS"
+            height="64"
+            width="256"
+          />
+        </p>
         <div>
           <Link to="/login" className="btn btn-info btn-lg">
             Connexion
